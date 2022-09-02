@@ -1,0 +1,35 @@
+<script async data-chunk="SearchFeedback" src="//static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/js/SearchFeedback.chunk.41ccf523.js"></script><script nonce="16170532706759717419">window.omniture={tpv:[],tl:[]};window.omniture.trackPageView=function(){window.omniture.tpv.push(arguments)};window.omniture.trackLink=function(){window.omniture.tl.push(arguments)}
+
+    if(window.location.host === 'www.flipkart.com' || /\.store\.flipkart\.com/i.test(window.location.host)){
+        window.s_account = "flipkart-prd"; //omniture account id
+    }else{
+        window.s_account = "flipkart-prd-test";
+    }
+    window.s_isDesktop = true;</script><script nonce="16170532706759717419">if ('serviceWorker' in navigator && navigator.userAgent.indexOf("Mobile") === -1) {
+		navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			navigator.onLine && navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('BANDWIDTH_COMPUTE');
+			navigator.serviceWorker.addEventListener('message', function (event) {
+				try {
+					const bandwidthData = JSON.parse(event.data);
+					if (bandwidthData && bandwidthData.data) {
+						window.bandwidth = bandwidthData.data.downlink + '_' + bandwidthData.data.computeMethod + '_' + bandwidthData.data.effectiveType + '_' + bandwidthData.data.type;
+					}
+				}catch(err) {
+					console.error('JSON.parse failed:', err);
+				}
+			});
+		})
+		.catch(function(err) {
+			console.error('ServiceWorker registration failed: ', err);
+		});
+	} else if('serviceWorker' in navigator && navigator.userAgent.indexOf("Mobile") > -1){
+        navigator.serviceWorker.getRegistration().then(function(registration) {
+            var serviceWorkerUnregistered=false;
+            if(registration) {
+                registration.unregister();
+                serviceWorkerUnregistered=true;
+            }
+            serviceWorkerUnregistered && window.location.reload();
+        });
+    }</script>
